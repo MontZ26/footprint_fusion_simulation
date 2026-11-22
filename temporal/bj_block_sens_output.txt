@@ -1,0 +1,8 @@
+NO2: origins per station min 1288 max 1357
+  block 7d: blocks 202, origins/block min 11 median 81 max 84; dempster-ccr +0.0260 [+0.0231,+0.0288]; ccr-mean +0.0093 [+0.0062,+0.0124]; dempster-mean +0.0353 [+0.0303,+0.0403]
+  block 14d: blocks 101, origins/block min 70 median 163 max 168; dempster-ccr +0.0260 [+0.0231,+0.0288]; ccr-mean +0.0093 [+0.0063,+0.0124]; dempster-mean +0.0353 [+0.0301,+0.0406]
+  block 28d: blocks 51, origins/block min 70 median 324 max 336; dempster-ccr +0.0260 [+0.0232,+0.0290]; ccr-mean +0.0093 [+0.0065,+0.0122]; dempster-mean +0.0353 [+0.0298,+0.0407]
+PM2.5: origins per station min 1333 max 1384
+  block 7d: blocks 202, origins/block min 11 median 82 max 84; dempster-ccr +0.0271 [+0.0237,+0.0304]; ccr-mean +0.0067 [+0.0035,+0.0103]; dempster-mean +0.0338 [+0.0277,+0.0398]
+  block 14d: blocks 101, origins/block min 71 median 164 max 168; dempster-ccr +0.0271 [+0.0235,+0.0306]; ccr-mean +0.0067 [+0.0036,+0.0104]; dempster-mean +0.0338 [+0.0279,+0.0402]
+  block 28d: blocks 51, origins/block min 71 median 325 max 336; dempster-ccr +0.0271 [+0.0236,+0.0308]; ccr-mean +0.0067 [+0.0035,+0.0103]; dempster-mean +0.0338 [+0.0277,+0.0405]

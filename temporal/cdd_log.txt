@@ -1,0 +1,40 @@
+/tmp/claude-0/-home-claude/193fba6b-d2ea-50e8-8fce-73255d9880b5/scratchpad/repo_add/temporal/cdd_test.py:35: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  rb=np.clip(R[['rho_pp','rho_pf','rho_cf']].mean(1).values,0,1); lam=1/(1+2*rb)
+
+=== ICOS CO2: n=937; mean rho_bar 0.81; mean lambda 0.38
+  dempster  acc 0.751 gap +0.117 brier 0.1904 ECE 0.118 slope 0.38
+  ccr       acc 0.751 gap +0.040 brier 0.1788 ECE 0.052 slope 0.67
+  mean      acc 0.748 gap -0.026 brier 0.1749 ECE 0.056 slope 1.05
+  cdd       acc 0.751 gap +0.005 brier 0.1751 ECE 0.042 slope 0.84
+  Brier(cdd)-Brier(mean) = +0.0002 [-0.0021,+0.0025]
+  Brier(cdd)-Brier(ccr) = -0.0037 [-0.0068,-0.0007]
+  Brier(cdd)-Brier(dempster) = -0.0153 [-0.0247,-0.0071]
+/tmp/claude-0/-home-claude/193fba6b-d2ea-50e8-8fce-73255d9880b5/scratchpad/repo_add/temporal/cdd_test.py:35: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  rb=np.clip(R[['rho_pp','rho_pf','rho_cf']].mean(1).values,0,1); lam=1/(1+2*rb)
+
+=== Beijing NO2: n=15959; mean rho_bar 0.81; mean lambda 0.38
+  dempster  acc 0.640 gap +0.181 brier 0.2588 ECE 0.181 slope 0.28
+  ccr       acc 0.641 gap +0.104 brier 0.2328 ECE 0.109 slope 0.49
+  mean      acc 0.640 gap +0.029 brier 0.2235 ECE 0.054 slope 0.77
+  cdd       acc 0.640 gap +0.062 brier 0.2258 ECE 0.072 slope 0.62
+  Brier(cdd)-Brier(mean) = +0.0023 [+0.0011,+0.0036]
+  Brier(cdd)-Brier(ccr) = -0.0070 [-0.0089,-0.0051]
+  Brier(cdd)-Brier(dempster) = -0.0330 [-0.0372,-0.0287]
+/tmp/claude-0/-home-claude/193fba6b-d2ea-50e8-8fce-73255d9880b5/scratchpad/repo_add/temporal/cdd_test.py:35: Pandas4Warning: Starting with pandas version 4.0 all arguments of mean will be keyword-only.
+  rb=np.clip(R[['rho_pp','rho_pf','rho_cf']].mean(1).values,0,1); lam=1/(1+2*rb)
+
+=== Beijing PM2.5: n=16223; mean rho_bar 0.79; mean lambda 0.39
+  dempster  acc 0.662 gap +0.177 brier 0.2495 ECE 0.181 slope 0.30
+  ccr       acc 0.661 gap +0.100 brier 0.2224 ECE 0.109 slope 0.54
+  mean      acc 0.662 gap +0.020 brier 0.2157 ECE 0.049 slope 0.84
+  cdd       acc 0.662 gap +0.060 brier 0.2171 ECE 0.075 slope 0.66
+  Brier(cdd)-Brier(mean) = +0.0014 [-0.0002,+0.0031]
+  Brier(cdd)-Brier(ccr) = -0.0053 [-0.0071,-0.0036]
+  Brier(cdd)-Brier(dempster) = -0.0324 [-0.0371,-0.0281]
+
+=== sweep (true rho, seed 11, N=20000): gap/Brier/ECE
+rho 0.00 lambda 1.00: acc 0.940 gap +0.021 brier 0.0443 ECE 0.021 slope 0.76
+rho 0.30 lambda 0.62: acc 0.923 gap +0.017 brier 0.0546 ECE 0.017 slope 0.87
+rho 0.60 lambda 0.45: acc 0.912 gap +0.008 brier 0.0631 ECE 0.011 slope 0.99
+rho 0.80 lambda 0.38: acc 0.901 gap +0.004 brier 0.0683 ECE 0.012 slope 1.05
+rho 0.95 lambda 0.34: acc 0.901 gap -0.007 brier 0.0704 ECE 0.012 slope 1.12

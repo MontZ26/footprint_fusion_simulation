@@ -1,0 +1,33 @@
+standardised errors: n 2811 mean 0.02 sd 1.12 skew -0.23 exkurt 2.98
+coverage |z|<1.645: 0.880 (nominal .90)  |z|<1.96: 0.922 (.95)
+KS vs N(0,1): stat 0.038 p 0.000704 ; Shapiro p 2.88e-24
+z0 sd 1.11 cov95 0.932
+z1 sd 1.14 cov95 0.915
+z2 sd 1.13 cov95 0.919
+spearman(|z|, sigma) past: -0.07  fc: -0.11
+st   CBW   CMN   IPR   JFJ   LMP   PAL   PRS   SAC   SSL
+z0  1.04  1.02  1.01  1.12  1.19  1.34  1.13  1.14  1.00
+z1  1.10  1.01  1.06  0.99  1.13  1.54  1.26  1.23  0.97
+z2  1.06  1.01  1.04  1.06  1.14  1.46  1.22  1.20  0.97
+mapping  cap     rule   acc    gap  brier  ECE10
+  gauss 0.90 dempster 0.751  0.116  0.190  0.118
+  gauss 0.90      ccr 0.751  0.037  0.178  0.049
+  gauss 0.90     mean 0.748 -0.028  0.175  0.057
+  gauss 0.95 dempster 0.751  0.117  0.190  0.118
+  gauss 0.95      ccr 0.751  0.040  0.179  0.052
+  gauss 0.95     mean 0.748 -0.026  0.175  0.056
+  gauss 0.99 dempster 0.751  0.117  0.190  0.118
+  gauss 0.99      ccr 0.751  0.042  0.179  0.054
+  gauss 0.99     mean 0.748 -0.025  0.175  0.055
+     t5 0.95 dempster 0.751  0.074  0.181  0.081
+     t5 0.95      ccr 0.751 -0.017  0.177  0.053
+     t5 0.95     mean 0.748 -0.072  0.180  0.072
+dempster ECE bins 5/10/20: [np.float64(0.118), np.float64(0.118), np.float64(0.128)]
+ccr ECE bins 5/10/20: [np.float64(0.048), np.float64(0.052), np.float64(0.069)]
+mean ECE bins 5/10/20: [np.float64(0.045), np.float64(0.056), np.float64(0.058)]
+          min  median  max  count
+rule                             
+ccr        49    84.0  161     10
+dempster   31    48.0  335     10
+mean       42    83.5  151     10
+yager      34    47.0  326     10

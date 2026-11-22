@@ -1,0 +1,51 @@
+
+=== ICOS CO2: origins 937, base rate 0.397, accuracy of always-majority 0.603, Brier(base rate) 0.239
+direction agreement (all 3 sources same side): 0.740; two-vs-one: 0.260
+  decision differs dempster vs ccr: all 0.0128; among agreeing 0.0000; among disagreeing 0.0492
+  decision differs ccr vs mean: all 0.0160; among agreeing 0.0000; among disagreeing 0.0615
+  decision differs dempster vs mean: all 0.0032; among agreeing 0.0000; among disagreeing 0.0123
+  decision differs dempster vs yager: all 0.0000; among agreeing 0.0000; among disagreeing 0.0000
+  any rule decision differs from mean: 0.0160
+  accuracy (mean rule) agreeing 0.788, disagreeing 0.635
+  dempster: conflict m(empty) mean 0.029 median 0.000 q90 0.099 q99 0.359; share with conflict>0.1: 0.099; accuracy 0.751
+  yager: conflict m(empty) mean 0.029 median 0.000 q90 0.099 q99 0.359; share with conflict>0.1: 0.099; accuracy 0.751
+  mean: conflict m(empty) mean 0.000 median 0.000 q90 0.000 q99 0.000; share with conflict>0.1: 0.000; accuracy 0.748
+  ccr: conflict m(empty) mean 0.025 median 0.000 q90 0.080 q99 0.325; share with conflict>0.1: 0.089; accuracy 0.751
+  error correlations (mean over origins): past-pres 0.65 past-fc 0.90 pres-fc 0.89
+  per-station range: pp 0.56-0.75 pf 0.77-0.98 cf 0.84-0.95
+  reliability dempster [(0, 335, 0.03, 0.13), (1, 104, 0.15, 0.24), (2, 62, 0.25, 0.37), (3, 35, 0.34, 0.34), (4, 48, 0.46, 0.46), (5, 37, 0.55, 0.57), (6, 31, 0.64, 0.61), (7, 37, 0.75, 0.54), (8, 48, 0.85, 0.69), (9, 200, 0.97, 0.77)]
+  reliability mean [(0, 55, 0.06, 0.02), (1, 129, 0.15, 0.13), (2, 134, 0.25, 0.16), (3, 151, 0.35, 0.26), (4, 116, 0.45, 0.41), (5, 89, 0.54, 0.57), (6, 78, 0.65, 0.6), (7, 67, 0.75, 0.66), (8, 76, 0.85, 0.88), (9, 42, 0.93, 0.83)]
+
+=== Beijing NO2: origins 15959, base rate 0.544, accuracy of always-majority 0.544, Brier(base rate) 0.248
+direction agreement (all 3 sources same side): 0.639; two-vs-one: 0.361
+  decision differs dempster vs ccr: all 0.0115; among agreeing 0.0000; among disagreeing 0.0320
+  decision differs ccr vs mean: all 0.0136; among agreeing 0.0000; among disagreeing 0.0377
+  decision differs dempster vs mean: all 0.0021; among agreeing 0.0000; among disagreeing 0.0057
+  decision differs dempster vs yager: all 0.0000; among agreeing 0.0000; among disagreeing 0.0000
+  any rule decision differs from mean: 0.0136
+  accuracy (mean rule) agreeing 0.665, disagreeing 0.594
+  dempster: conflict m(empty) mean 0.036 median 0.000 q90 0.135 q99 0.355; share with conflict>0.1: 0.135; accuracy 0.640
+  yager: conflict m(empty) mean 0.036 median 0.000 q90 0.135 q99 0.355; share with conflict>0.1: 0.135; accuracy 0.640
+  mean: conflict m(empty) mean 0.000 median 0.000 q90 0.000 q99 0.000; share with conflict>0.1: 0.000; accuracy 0.640
+  ccr: conflict m(empty) mean 0.031 median 0.000 q90 0.117 q99 0.321; share with conflict>0.1: 0.117; accuracy 0.641
+  error correlations (mean over origins): past-pres 0.64 past-fc 0.90 pres-fc 0.89
+  per-station range: pp 0.63-0.66 pf 0.88-0.92 cf 0.87-0.91
+  reliability dempster [(0, 3150, 0.03, 0.27), (1, 1411, 0.15, 0.45), (2, 1146, 0.25, 0.49), (3, 986, 0.35, 0.52), (4, 869, 0.45, 0.53), (5, 878, 0.55, 0.55), (6, 1061, 0.65, 0.61), (7, 1403, 0.75, 0.65), (8, 1809, 0.85, 0.66), (9, 3246, 0.96, 0.75)]
+  reliability mean [(0, 189, 0.08, 0.13), (1, 1060, 0.16, 0.21), (2, 1673, 0.25, 0.32), (3, 2115, 0.35, 0.44), (4, 2522, 0.45, 0.51), (5, 2727, 0.55, 0.59), (6, 2682, 0.65, 0.68), (7, 1889, 0.75, 0.72), (8, 916, 0.84, 0.77), (9, 186, 0.94, 0.85)]
+
+=== Beijing PM2.5: origins 16223, base rate 0.528, accuracy of always-majority 0.528, Brier(base rate) 0.249
+direction agreement (all 3 sources same side): 0.620; two-vs-one: 0.380
+  decision differs dempster vs ccr: all 0.0088; among agreeing 0.0000; among disagreeing 0.0232
+  decision differs ccr vs mean: all 0.0108; among agreeing 0.0000; among disagreeing 0.0284
+  decision differs dempster vs mean: all 0.0020; among agreeing 0.0000; among disagreeing 0.0052
+  decision differs dempster vs yager: all 0.0000; among agreeing 0.0000; among disagreeing 0.0000
+  any rule decision differs from mean: 0.0108
+  accuracy (mean rule) agreeing 0.665, disagreeing 0.657
+  dempster: conflict m(empty) mean 0.042 median 0.000 q90 0.158 q99 0.359; share with conflict>0.1: 0.162; accuracy 0.662
+  yager: conflict m(empty) mean 0.042 median 0.000 q90 0.158 q99 0.359; share with conflict>0.1: 0.162; accuracy 0.662
+  mean: conflict m(empty) mean 0.000 median 0.000 q90 0.000 q99 0.000; share with conflict>0.1: 0.000; accuracy 0.662
+  ccr: conflict m(empty) mean 0.037 median 0.000 q90 0.136 q99 0.324; share with conflict>0.1: 0.140; accuracy 0.661
+  error correlations (mean over origins): past-pres 0.61 past-fc 0.85 pres-fc 0.92
+  per-station range: pp 0.60-0.61 pf 0.84-0.86 cf 0.92-0.92
+  reliability dempster [(0, 3788, 0.03, 0.22), (1, 1449, 0.15, 0.44), (2, 1033, 0.25, 0.49), (3, 830, 0.35, 0.56), (4, 792, 0.45, 0.51), (5, 836, 0.55, 0.59), (6, 944, 0.65, 0.65), (7, 1138, 0.75, 0.63), (8, 1633, 0.85, 0.66), (9, 3780, 0.96, 0.74)]
+  reliability mean [(0, 214, 0.07, 0.07), (1, 1270, 0.16, 0.15), (2, 2003, 0.25, 0.29), (3, 2231, 0.35, 0.42), (4, 2180, 0.45, 0.52), (5, 2371, 0.55, 0.62), (6, 2489, 0.65, 0.68), (7, 2179, 0.75, 0.73), (8, 1141, 0.84, 0.75), (9, 145, 0.92, 0.74)]

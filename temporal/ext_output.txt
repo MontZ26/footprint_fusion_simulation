@@ -1,0 +1,50 @@
+
+=== horizon 1: origins 937, stations 9, base rate 0.397, Brier(base rate) 0.239
+Brier(dempster)-Brier(ccr) = +0.0116  95% [+0.0053,+0.0190]
+Brier(ccr)-Brier(mean) = +0.0039  95% [-0.0009,+0.0092]
+Brier(dempster)-Brier(mean) = +0.0155  95% [+0.0055,+0.0273]
+ h     rule   acc   over  brier   ECE  slope  intercept    m0    mH    mN    mT   Bel    Pl   mTn  Bel_un  Pl_un
+ 1 dempster 0.751  0.117  0.190 0.118  0.381     -0.257 0.029 0.284 0.477 0.210 0.294 0.512 0.218   0.284  0.494
+ 1    yager 0.751  0.110  0.190 0.116  0.388     -0.252 0.029 0.284 0.477 0.239 0.284 0.523 0.239   0.284  0.523
+ 1     mean 0.748 -0.026  0.175 0.056  1.048     -0.245 0.000 0.181 0.296 0.523 0.181 0.704 0.523   0.181  0.704
+ 1      ccr 0.751  0.040  0.179 0.052  0.666     -0.271 0.025 0.237 0.380 0.359 0.245 0.612 0.367   0.237  0.595
+       n  rho_pp  rho_pf  rho_cf  over_dempster  over_ccr  over_mean
+st                                                                  
+CBW   79    0.75    0.98    0.86           0.17      0.11       0.04
+CMN  210    0.65    0.93    0.86           0.12      0.04      -0.02
+IPR   76    0.64    0.90    0.91           0.15      0.07       0.00
+JFJ   77    0.68    0.95    0.86           0.09     -0.00      -0.04
+LMP   72    0.61    0.85    0.93           0.07      0.02      -0.07
+PAL   77    0.71    0.86    0.94           0.01     -0.08      -0.14
+PRS   49    0.56    0.77    0.95           0.06     -0.00      -0.08
+SAC  224    0.62    0.87    0.91           0.16      0.08       0.01
+SSL   73    0.65    0.94    0.84           0.09     -0.00      -0.05
+LOSO excl CBW {'dempster': np.float64(0.111), 'yager': np.float64(0.105), 'mean': np.float64(-0.032), 'ccr': np.float64(0.034)}
+LOSO excl CMN {'dempster': np.float64(0.115), 'yager': np.float64(0.108), 'mean': np.float64(-0.028), 'ccr': np.float64(0.039)}
+LOSO excl IPR {'dempster': np.float64(0.113), 'yager': np.float64(0.106), 'mean': np.float64(-0.028), 'ccr': np.float64(0.038)}
+LOSO excl JFJ {'dempster': np.float64(0.119), 'yager': np.float64(0.112), 'mean': np.float64(-0.024), 'ccr': np.float64(0.044)}
+LOSO excl LMP {'dempster': np.float64(0.12), 'yager': np.float64(0.114), 'mean': np.float64(-0.022), 'ccr': np.float64(0.042)}
+LOSO excl PAL {'dempster': np.float64(0.127), 'yager': np.float64(0.119), 'mean': np.float64(-0.015), 'ccr': np.float64(0.051)}
+LOSO excl PRS {'dempster': np.float64(0.12), 'yager': np.float64(0.113), 'mean': np.float64(-0.023), 'ccr': np.float64(0.043)}
+LOSO excl SAC {'dempster': np.float64(0.104), 'yager': np.float64(0.098), 'mean': np.float64(-0.037), 'ccr': np.float64(0.027)}
+LOSO excl SSL {'dempster': np.float64(0.118), 'yager': np.float64(0.112), 'mean': np.float64(-0.024), 'ccr': np.float64(0.044)}
+
+=== horizon 3: origins 917, stations 9, base rate 0.397, Brier(base rate) 0.239
+Brier(dempster)-Brier(ccr) = +0.0163  95% [+0.0093,+0.0250]
+Brier(ccr)-Brier(mean) = +0.0076  95% [+0.0015,+0.0148]
+Brier(dempster)-Brier(mean) = +0.0238  95% [+0.0122,+0.0382]
+ h     rule   acc  over  brier   ECE  slope  intercept    m0    mH    mN    mT   Bel    Pl   mTn  Bel_un  Pl_un
+ 3 dempster 0.695 0.152  0.227 0.152  0.313     -0.302 0.023 0.275 0.448 0.254 0.283 0.545 0.262   0.275  0.529
+ 3    yager 0.695 0.147  0.226 0.147  0.316     -0.300 0.023 0.275 0.448 0.277 0.275 0.552 0.277   0.275  0.552
+ 3     mean 0.690 0.005  0.204 0.061  0.847     -0.295 0.000 0.161 0.257 0.582 0.161 0.743 0.582   0.161  0.743
+ 3      ccr 0.702 0.060  0.211 0.086  0.542     -0.314 0.019 0.219 0.341 0.421 0.225 0.653 0.428   0.219  0.640
+
+=== horizon 7: origins 820, stations 9, base rate 0.421, Brier(base rate) 0.244
+Brier(dempster)-Brier(ccr) = +0.0249  95% [+0.0128,+0.0384]
+Brier(ccr)-Brier(mean) = +0.0106  95% [+0.0043,+0.0179]
+Brier(dempster)-Brier(mean) = +0.0354  95% [+0.0189,+0.0549]
+ h     rule   acc  over  brier   ECE  slope  intercept    m0    mH    mN    mT   Bel    Pl   mTn  Bel_un  Pl_un
+ 7 dempster 0.648 0.184  0.256 0.184  0.271     -0.229 0.023 0.273 0.423 0.282 0.280 0.570 0.290   0.273  0.555
+ 7    yager 0.648 0.180  0.254 0.180  0.277     -0.227 0.023 0.273 0.423 0.305 0.273 0.577 0.305   0.273  0.577
+ 7     mean 0.645 0.034  0.221 0.061  0.739     -0.224 0.000 0.155 0.233 0.613 0.155 0.767 0.613   0.155  0.767
+ 7      ccr 0.654 0.091  0.231 0.098  0.468     -0.238 0.017 0.213 0.313 0.457 0.218 0.681 0.464   0.213  0.670

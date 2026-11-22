@@ -1,0 +1,58 @@
+variable NO2 (log); stations 12; daily points per station [1425, 1433, 1403, 1394, 1434, 1430, 1394, 1430, 1413, 1422, 1424, 1426]
+
+=== NO2 log horizon 1: origins 15959, stations 12, base rate 0.544, Brier(base rate) 0.248
+mean error corr past-pres 0.64  past-fc 0.90  pres-fc 0.89; per-station past-fc range 0.88-0.92
+Brier(dempster)-Brier(ccr) = +0.0260  95% [+0.0229,+0.0288]  Bonferroni 98.3% [+0.0223,+0.0293]
+Brier(ccr)-Brier(mean) = +0.0093  95% [+0.0062,+0.0123]  Bonferroni 98.3% [+0.0057,+0.0130]
+Brier(dempster)-Brier(mean) = +0.0353  95% [+0.0299,+0.0406]  Bonferroni 98.3% [+0.0286,+0.0415]
+ h     rule   acc   gap  brier   ECE  slope    mT    m0   Bel    Pl
+ 1 dempster 0.640 0.181  0.259 0.181  0.281 0.288 0.036 0.366 0.664
+ 1    yager 0.640 0.173  0.257 0.173  0.281 0.324 0.036 0.353 0.678
+ 1     mean 0.640 0.029  0.223 0.054  0.774 0.621 0.000 0.195 0.817
+ 1      ccr 0.641 0.104  0.233 0.109  0.488 0.435 0.031 0.284 0.730
+blocks 101
+standardised errors: sd 1.07 skew 0.58 exkurt 1.38 cov95 0.934
+                    n  gap_D  gap_C  gap_M
+st                                        
+Aotizhongxin   1336.0  0.179  0.107  0.027
+Changping      1353.0  0.188  0.111  0.035
+Dingling       1288.0  0.198  0.114  0.042
+Dongsi         1299.0  0.190  0.116  0.039
+Guanyuan       1357.0  0.189  0.116  0.038
+Gucheng        1356.0  0.177  0.097  0.023
+Huairou        1289.0  0.168  0.092  0.017
+Nongzhanguan   1346.0  0.178  0.104  0.024
+Shunyi         1313.0  0.171  0.088  0.019
+Tiantan        1334.0  0.194  0.117  0.046
+Wanliu         1345.0  0.166  0.087  0.014
+Wanshouxigong  1343.0  0.178  0.102  0.029
+  mapping gauss cap 0.99 dempster: gap +0.181 brier 0.259 ECE 0.181
+  mapping gauss cap 0.99 ccr: gap +0.105 brier 0.233 ECE 0.110
+  mapping gauss cap 0.99 mean: gap +0.030 brier 0.223 ECE 0.054
+  mapping t5 cap 0.95 dempster: gap +0.134 brier 0.242 ECE 0.135
+  mapping t5 cap 0.95 ccr: gap +0.051 brier 0.223 ECE 0.062
+  mapping t5 cap 0.95 mean: gap -0.008 brier 0.222 ECE 0.042
+
+=== NO2 log horizon 3: origins 15751, stations 12, base rate 0.540, Brier(base rate) 0.248
+mean error corr past-pres 0.77  past-fc 0.99  pres-fc 0.81; per-station past-fc range 0.99-1.00
+Brier(dempster)-Brier(ccr) = +0.0353  95% [+0.0319,+0.0390]  Bonferroni 98.3% [+0.0313,+0.0398]
+Brier(ccr)-Brier(mean) = +0.0276  95% [+0.0234,+0.0317]  Bonferroni 98.3% [+0.0225,+0.0325]
+Brier(dempster)-Brier(mean) = +0.0629  95% [+0.0574,+0.0686]  Bonferroni 98.3% [+0.0561,+0.0698]
+ h     rule   acc   gap  brier   ECE  slope    mT    m0   Bel    Pl
+ 3 dempster 0.534 0.245  0.328 0.251  0.069 0.354 0.036 0.322 0.688
+ 3    yager 0.534 0.239  0.326 0.246  0.071 0.390 0.036 0.311 0.701
+ 3     mean 0.532 0.100  0.265 0.113  0.199 0.688 0.000 0.158 0.846
+ 3      ccr 0.537 0.171  0.293 0.177  0.099 0.509 0.024 0.241 0.760
+blocks 101
+
+=== NO2 log horizon 7: origins 15595, stations 12, base rate 0.539, Brier(base rate) 0.248
+mean error corr past-pres 0.76  past-fc 0.99  pres-fc 0.80; per-station past-fc range 0.99-1.00
+Brier(dempster)-Brier(ccr) = +0.0344  95% [+0.0288,+0.0401]  Bonferroni 98.3% [+0.0278,+0.0417]
+Brier(ccr)-Brier(mean) = +0.0285  95% [+0.0238,+0.0335]  Bonferroni 98.3% [+0.0225,+0.0346]
+Brier(dempster)-Brier(mean) = +0.0629  95% [+0.0551,+0.0713]  Bonferroni 98.3% [+0.0536,+0.0730]
+ h     rule   acc   gap  brier   ECE  slope    mT    m0   Bel    Pl
+ 7 dempster 0.532 0.247  0.325 0.247  0.080 0.352 0.037 0.325 0.690
+ 7    yager 0.532 0.241  0.323 0.241  0.083 0.389 0.037 0.314 0.703
+ 7     mean 0.534 0.097  0.262 0.104  0.236 0.689 0.000 0.159 0.848
+ 7      ccr 0.533 0.175  0.291 0.175  0.109 0.509 0.025 0.243 0.762
+blocks 100
