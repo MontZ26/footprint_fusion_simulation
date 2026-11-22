@@ -1,0 +1,20 @@
+BE-Bra 7833
+CZ-BK1 6932
+DE-Hai 7775
+DE-Tha 10553
+DK-Sor 9462
+FI-Hyy 9002
+FR-Fon 2242
+IT-Ren 7297
+SE-Nor 2571
+
+origins 63667, sites 9, prevalence 0.526, sources agree 0.425, mean rho 0.83
+dempster  acc 0.643 gap +0.122 brier 0.2360 ECE 0.122 slope 0.41
+ccr       acc 0.655 gap +0.055 brier 0.2154 ECE 0.055 slope 0.69
+mean      acc 0.633 gap -0.014 brier 0.2228 ECE 0.022 slope 1.12
+cdd       acc 0.643 gap +0.010 brier 0.2191 ECE 0.021 slope 0.88
+Brier(dempster)-Brier(ccr) = +0.0206 [+0.0196,+0.0216]  blocks 785
+Brier(ccr)-Brier(mean) = -0.0075 [-0.0089,-0.0061]  blocks 785
+Brier(cdd)-Brier(mean) = -0.0038 [-0.0045,-0.0031]  blocks 785
+Brier(cdd)-Brier(ccr) = +0.0037 [+0.0028,+0.0046]  blocks 785
+Brier(dempster)-Brier(mean) = +0.0132 [+0.0113,+0.0150]  blocks 785

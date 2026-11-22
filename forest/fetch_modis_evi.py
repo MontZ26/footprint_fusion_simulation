@@ -1,3 +1,7 @@
+try:
+    import truststore; truststore.inject_into_ssl()
+except ImportError:
+    pass
 """Download MODIS MOD13Q1 EVI (250 m, 16-day) at each site from the ORNL DAAC MODIS REST service (no account needed).
 RUN ON YOUR OWN COMPUTER (the cloud sandbox cannot reach it). UNTESTED against the live service: check the JSON field names on the first site.
 Usage: python fetch_modis_evi.py sites.csv 2015 2019   -> evi_<site>.csv (date,evi)"""

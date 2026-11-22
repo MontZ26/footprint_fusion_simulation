@@ -10,9 +10,15 @@ for f in sorted(glob.glob(os.path.join(sys.argv[1],'*_DD_*.csv'))):
     nee=x['NEE_VUT_REF'].where(x['NEE_VUT_REF_QC']>=0.5) if 'NEE_VUT_REF_QC' in x else x['NEE_VUT_REF']
     d=pd.DataFrame(dict(site=st,date=x['date'],nee=nee,tair=x['TA_F'],rad=x['SW_IN_F']*0.0864))  # W m-2 daily mean -> MJ m-2 d-1
     ef=os.path.join(sys.argv[2],f'evi_{st}.csv')
+    if len(sys.argv)>3:
+        g=glob.glob(os.path.join(sys.argv[3],f'*{st}*ERA5_DD_*.csv'))
+        if g:
+            e=pd.read_csv(g[0],na_values=['-9999']); e['date']=pd.to_datetime(e['TIMESTAMP'].astype(str),format='%Y%m%d')
+            e=pd.DataFrame(dict(date=e['date'],tair_era=e['TA_ERA'],rad_era=e['SW_IN_ERA']*0.0864,vpd_era=e['VPD_ERA']))
+            d=d.merge(e,on='date',how='left')
     if os.path.exists(ef):
         e=pd.read_csv(ef,parse_dates=['date']); d=d.merge(e,on='date',how='left')
     else: d['evi']=float('nan')
     rows.append(d)
-D=pd.concat(rows); D=D[['site','date','nee','evi','tair','rad']]; D.to_csv('forest_daily.csv',index=False)
+D=pd.concat(rows); cols=['site','date','nee','evi','tair','rad']+[c for c in ('tair_era','rad_era','vpd_era') if c in D]; D=D[cols]; D.to_csv('forest_daily.csv',index=False)
 print(D.groupby('site').agg(n=('nee','size'),nee_valid=('nee','count'),evi_valid=('evi','count')))

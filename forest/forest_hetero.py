@@ -11,8 +11,9 @@ Usage: python forest_hetero.py forest_daily.csv [h]     -> prints table, writes 
 """
 import sys, numpy as np, pandas as pd
 from scipy.stats import norm
-sys.path.insert(0, __file__.rsplit('/',1)[0]+'/../temporal') if '/' in __file__ else None
-import os; os.environ.setdefault('ICOS_DIR','/nonexistent')
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','temporal'))
+os.environ.setdefault('ICOS_DIR','/nonexistent')
 import temporal_extended as T
 W=30; TRAIN=90; CAP=0.95
 def dem_prob(d,s,lam):
@@ -26,6 +27,9 @@ def site_run(df,h):
     df=df.sort_values('date').set_index('date').asfreq('D'); up=-df['nee'].values; n=len(up); rows=[]
     evi=df['evi'].ffill(limit=30).shift(16).values   # last observation only, delayed 16 days (16-day composites): no look-ahead
     ta=df['tair'].values; ra=df['rad'].values
+    if 'tair_era' in df:
+        satX=np.c_[df['tair_era'].values,df['rad_era'].values,df['vpd_era'].values]
+    else: satX=np.c_[evi]
     pred={k:np.full(n,np.nan) for k in ('insitu','sat','met')}
     for t in range(TRAIN+7,n-h):
         w=up[t-6:t+1]
@@ -33,10 +37,10 @@ def site_run(df,h):
         pred['insitu'][t]=np.nanmean(w)
         s0=max(7,t-TRAIN-h); idx=np.arange(s0,t-h+1)   # training pairs (x_s, up_{s+h}) with s+h<=t
         y=up[idx+h]; ok=~np.isnan(y)
-        for k,X in (('sat',np.c_[evi[idx]]),('met',np.c_[ta[idx],ra[idx]])):
+        for k,X in (('sat',satX[idx]),('met',np.c_[ta[idx],ra[idx]])):
             xk=X[ok]; yk=y[ok]; good=~np.isnan(xk).any(1)
             if good.sum()<30: continue
-            b=ols(xk[good],yk[good]); xt=(np.c_[evi[t]] if k=='sat' else np.c_[ta[t],ra[t]])
+            b=ols(xk[good],yk[good]); xt=(satX[t][None,:] if k=='sat' else np.c_[ta[t],ra[t]])
             if np.isnan(xt).any(): continue
             pred[k][t]=b[0]+xt[0]@b[1:]
     err={k:pred[k]-np.r_[up[h:],[np.nan]*h] for k in pred}

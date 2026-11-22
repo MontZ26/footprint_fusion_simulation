@@ -1,0 +1,10 @@
+forest/flux/
+forest/flux_tmp/
+forest/flux_zips/
+forest/era5/
+forest/evi/
+forest/fluxnet-shuttle-run.log
+forest/fluxnet_shuttle_snapshot_*.csv
+forest/forest_daily.csv
+__pycache__/
+forest/forest_results.csv
