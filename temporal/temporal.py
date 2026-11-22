@@ -16,6 +16,7 @@ def load(f):
 S={}
 for f in sorted(glob.glob(A+'*.CO2')):
     c,g=load(f); S[c]=g
+if not S: sys.exit(f'No ICOS *.CO2 files found in {A!r}. Put them in data/icos or set ICOS_DIR (see data/README_data.md).')
 def comb_masses(ms,rule):
     """ms: list of (mH,mN,mT). frame {H,N}. returns BetP(H)"""
     def dem(a,b,yager=False):

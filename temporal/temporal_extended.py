@@ -98,6 +98,7 @@ def logit_fit(p,y):
     f=lambda b:-(y*(b[0]+b[1]*z)-np.log1p(np.exp(b[0]+b[1]*z))).sum()
     r=minimize(f,[0,1],method='BFGS'); return r.x   # intercept, slope
 if __name__=='__main__':
+    if not S: sys.exit(f'No ICOS *.CO2 files found in {A!r}. Put them in data/icos or set ICOS_DIR (see data/README_data.md).')
     rules=['dempster','yager','mean','ccr']; res_all={}
     for h in [1,3,7]:
         R=run(h); R.to_pickle(f'ext_R_h{h}.pkl'); y=R.truth.values

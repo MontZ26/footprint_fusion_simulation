@@ -62,3 +62,4 @@ Outputs: `beijing_*_summary.csv`; console output saved in `beijing_*.txt`. Runti
 - `temporal/bj_block_sens.py`: Beijing block counts and 7/14/28-day block sensitivity (`bj_block_sens_output.txt`).
 - `temporal/cdd_test.py`: correlation-discounted Dempster rule (weights raised to 1/(1+(k-1)*rho_bar)); output `cdd_test_output.txt`.
 - `forest/`: heterogeneous-source forest experiment (pipeline tested on synthetic data only; fetch/build scripts untested against live data; see forest/README_forest.md).
+- Data: `data/icos` (included), `fetch_beijing.py` (downloads Beijing data); `run_all.sh` now runs from the repository root.
