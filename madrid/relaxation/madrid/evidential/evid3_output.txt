@@ -1,0 +1,21 @@
+AUDIT incl. empty set: idempotent 7.3e-17 commutative 0.0e+00 associative 2.2e-16
+projection sums 1.0 1.0 | singleton L -> {'L': np.float64(0.56), 'LM': np.float64(0.234), 'Θ': np.float64(0.206)} | {L,M} -> {'LM': np.float64(0.56), 'Θ': np.float64(0.44)}
+
+SENSITIVITY: adjacent-class compatibility a x reliability rho. Top class (BetP) / m(Θ) / m(∅) / pool conflict
+rho=0.5 a=0.1: agree: L (0.39,0.39,0.22) Θ=0.33 ∅=0.18 pool∅=0.00 | disagree: M (0.33,0.35,0.32) Θ=0.25 ∅=0.28 pool∅=0.16 | uncert: M (0.35,0.40,0.25) Θ=0.37 ∅=0.17 pool∅=0.00 | n=1 vs 8 max diff 1.1e-16
+rho=0.5 a=0.2: agree: M (0.37,0.41,0.22) Θ=0.32 ∅=0.18 pool∅=0.00 | disagree: M (0.31,0.39,0.30) Θ=0.25 ∅=0.26 pool∅=0.15 | uncert: M (0.35,0.41,0.25) Θ=0.36 ∅=0.18 pool∅=0.00 | n=1 vs 8 max diff 0.0e+00
+rho=0.5 a=0.3: agree: M (0.36,0.42,0.21) Θ=0.31 ∅=0.18 pool∅=0.00 | disagree: M (0.31,0.42,0.27) Θ=0.24 ∅=0.25 pool∅=0.13 | uncert: M (0.35,0.41,0.24) Θ=0.35 ∅=0.18 pool∅=0.00 | n=1 vs 8 max diff 2.8e-16
+rho=0.5 a=0.45: agree: M (0.37,0.43,0.20) Θ=0.29 ∅=0.19 pool∅=0.00 | disagree: M (0.31,0.46,0.23) Θ=0.23 ∅=0.24 pool∅=0.11 | uncert: M (0.35,0.41,0.24) Θ=0.34 ∅=0.19 pool∅=0.00 | n=1 vs 8 max diff 1.7e-16
+rho=0.5 a=0.6: agree: M (0.37,0.43,0.20) Θ=0.28 ∅=0.20 pool∅=0.00 | disagree: M (0.31,0.47,0.22) Θ=0.23 ∅=0.23 pool∅=0.07 | uncert: M (0.35,0.41,0.24) Θ=0.34 ∅=0.19 pool∅=0.00 | n=1 vs 8 max diff 0.0e+00
+rho=0.8 a=0.1: agree: L (0.58,0.28,0.14) Θ=0.20 ∅=0.18 pool∅=0.00 | disagree: L (0.40,0.24,0.37) Θ=0.09 ∅=0.49 pool∅=0.43 | uncert: M (0.35,0.41,0.25) Θ=0.38 ∅=0.12 pool∅=0.00 | n=1 vs 8 max diff 4.4e-16
+rho=0.8 a=0.2: agree: L (0.53,0.33,0.14) Θ=0.20 ∅=0.20 pool∅=0.00 | disagree: L (0.35,0.32,0.33) Θ=0.09 ∅=0.47 pool∅=0.40 | uncert: M (0.35,0.41,0.24) Θ=0.36 ∅=0.14 pool∅=0.00 | n=1 vs 8 max diff 3.3e-16
+rho=0.8 a=0.3: agree: L (0.48,0.38,0.14) Θ=0.19 ∅=0.20 pool∅=0.00 | disagree: M (0.32,0.40,0.29) Θ=0.09 ∅=0.44 pool∅=0.36 | uncert: M (0.35,0.41,0.24) Θ=0.34 ∅=0.16 pool∅=0.00 | n=1 vs 8 max diff 0.0e+00
+rho=0.8 a=0.45: agree: M (0.41,0.44,0.15) Θ=0.20 ∅=0.20 pool∅=0.00 | disagree: M (0.27,0.49,0.24) Θ=0.10 ∅=0.36 pool∅=0.28 | uncert: M (0.35,0.42,0.24) Θ=0.33 ∅=0.18 pool∅=0.00 | n=1 vs 8 max diff 1.7e-16
+rho=0.8 a=0.6: agree: M (0.38,0.46,0.16) Θ=0.21 ∅=0.20 pool∅=0.00 | disagree: M (0.26,0.53,0.21) Θ=0.13 ∅=0.29 pool∅=0.19 | uncert: M (0.35,0.42,0.23) Θ=0.32 ∅=0.19 pool∅=0.00 | n=1 vs 8 max diff 0.0e+00
+rho=0.95 a=0.1: agree: L (0.70,0.21,0.09) Θ=0.11 ∅=0.27 pool∅=0.00 | disagree: L (0.42,0.19,0.39) Θ=0.03 ∅=0.70 pool∅=0.62 | uncert: M (0.35,0.41,0.24) Θ=0.40 ∅=0.07 pool∅=0.00 | n=1 vs 8 max diff 4.2e-17
+rho=0.95 a=0.2: agree: L (0.63,0.29,0.09) Θ=0.12 ∅=0.22 pool∅=0.00 | disagree: L (0.36,0.31,0.32) Θ=0.03 ∅=0.64 pool∅=0.56 | uncert: M (0.35,0.41,0.24) Θ=0.37 ∅=0.11 pool∅=-0.00 | n=1 vs 8 max diff 1.1e-16
+rho=0.95 a=0.3: agree: L (0.56,0.35,0.09) Θ=0.12 ∅=0.19 pool∅=0.00 | disagree: M (0.31,0.42,0.27) Θ=0.04 ∅=0.57 pool∅=0.50 | uncert: M (0.35,0.42,0.23) Θ=0.34 ∅=0.14 pool∅=0.00 | n=1 vs 8 max diff 2.8e-17
+rho=0.95 a=0.45: agree: L (0.47,0.43,0.10) Θ=0.13 ∅=0.20 pool∅=0.00 | disagree: M (0.25,0.53,0.22) Θ=0.05 ∅=0.46 pool∅=0.40 | uncert: M (0.34,0.42,0.23) Θ=0.32 ∅=0.17 pool∅=0.00 | n=1 vs 8 max diff 1.1e-16
+rho=0.95 a=0.6: agree: M (0.39,0.48,0.13) Θ=0.17 ∅=0.19 pool∅=0.00 | disagree: M (0.22,0.58,0.20) Θ=0.08 ∅=0.34 pool∅=0.27 | uncert: M (0.34,0.43,0.23) Θ=0.31 ∅=0.19 pool∅=0.00 | n=1 vs 8 max diff 1.9e-16
+
+Madrid-style kernel (class centroids 9.68,22.09,37.20,54.10; s=6.95): adjacent compat L-M 0.20, M-H 0.09, H-VH 0.05
