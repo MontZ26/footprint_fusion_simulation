@@ -1,0 +1,10 @@
+C4 projection (sums to 1 incl. empty set, empty mass carried over, singleton formula, envelope max 1) PASS 
+C5 cautious rule idempotent, commutative, associative (random BBAs, 1e-9) PASS (INV counter 0)
+C5b cautious rule agrees with the audited evid_k.Frame implementation PASS 
+C6a CDD with rho = 0 equals the conjunctive rule PASS 
+C6b CDD with rho = 1 does not over-count identical copies PASS 
+C7 root search hits the target within 1e-4 when no clipping is flagged PASS flags [200, 0, 0, 0, 0, 0]
+C13 reconstruction keeps m(empty) and m(Theta) PASS 
+C14 BetP uses normalised masses PASS 
+C10 leakage: maximum day read = 140 PASS 
+C1 validation cases = 1657, dates = 70, stations = 24 PASS 

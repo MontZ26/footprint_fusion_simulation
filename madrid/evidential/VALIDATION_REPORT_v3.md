@@ -1,0 +1,11 @@
+VALIDATION REPORT, RASTER_SPEC v3 rev 5 (spec sha256 8bb337cc8635). Validation days 71-140 only (1,657 cases, 70 dates, 24 stations); the final period (days 141-236) was not read.
+Scripts: v3_prep.py (stage 1), v3_valid.py (stages 2-4). Audit: C1, C4-C7, C10, C13, C14 and C3/C2/C15 pass (audit_report.txt, prep_audit.json); no invalid canonical decomposition, no root-search clipping, no complete conflict, no missing prediction.
+
+Baselines (RMSE ug/m3): IDW alone 6.04; calibrated satellite alone 8.22; B2-strict fusion 6.22.
+Primary pipeline (conjunctive combination, soft defuzzification), best grid point per variant/family: 7.10-7.28 for all 9 combinations, worse than IDW alone by 1.06-1.24 (95% block-bootstrap intervals exclude 0; 10 blocks only).
+Relaxation versus the same pipeline without relaxation (B3): probabilistic -0.04 to -0.09 (intervals exclude 0), possibilistic -0.02 to -0.11 (V2 and V3 exclude 0, V1 touches 0), evidential -0.03 to +0.006 (all intervals include 0). Differences between the three families are small (|diff| <= 0.09) and mostly include 0.
+Selected on validation RMSE: prob V1; poss V2 gamma 0.25; evid V2 rho 0.95 (RMSE 7.100). V1/V3 evidential rho 0.95, V3 poss gamma 0.75 lie on the grid boundary.
+Sensitivities (all reported, none used for selection): correction-mode RMSE about 6.03-6.55 (equals IDW when the relaxation effect is small); hard defuzzification 7.3-7.8; S3 (no reconstruction) V1/V3 6.54-6.63; cautious combination and CDD(rho_AB) differ by <= 0.13 from the conjunctive rule; S1 (four nearest stations) 7.1-7.5; S0 satellite-only: accuracy 0.50-0.54, Brier 0.56-0.57, relaxation does not improve it.
+Calibration of the variants (centre pixel, before relaxation): ECE V1 membership 0.093, V3 Gaussian 0.041, V1/V3 BetP of the consonant BBA 0.12-0.13, V2 BetP 0.308.
+Observations N1-N4 are in DEVIATIONS_v3.md (rho_ring = 0 for all stations; reconstruction collapses to a crisp class; V2 evidential conflict 0.85; boundary selections).
+Reading: a null-to-negative result for the satellite/relaxation pipeline against IDW alone; relaxation gives at most small gains over no relaxation for the probabilistic and possibilistic families and none for the evidential one.

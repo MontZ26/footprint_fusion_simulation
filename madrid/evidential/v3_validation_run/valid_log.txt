@@ -1,0 +1,106 @@
+  case 0 of 1657  0s
+  case 200 of 1657  4s
+  case 400 of 1657  8s
+  case 600 of 1657  12s
+  case 800 of 1657  16s
+  case 1000 of 1657  20s
+  case 1200 of 1657  23s
+  case 1400 of 1657  27s
+  case 1600 of 1657  30s
+/mnt/user-data/outputs/evidential_relaxation/v3_valid.py:307: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  fl.to_csv(os.path.join(out, 'validation_failure_flags.csv'), index=False); print(fl[(fl[['root_upper_clip', 'root_lower_clip', 'root_nonconverged', 'root_complete_conflict_input', 'invalid_decomposition_cases', 'complete_conflict_final']].sum(1) > 0)].to_string(index=False))
+records 521955 32s
+variant    family  RMSE   MAE  bias  accuracy  Brier
+     V1   B3_evid 7.168 5.679 0.545     0.674  0.619
+     V1   B3_poss 7.168 5.679 0.545     0.674  0.619
+     V1   B3_prob 7.205 5.720 0.798     0.673  0.621
+     V2   B3_evid 7.096 5.662 1.027     0.658  0.613
+     V2   B3_poss 7.243 5.811 1.293     0.661  0.634
+     V2   B3_prob 7.244 5.811 1.293     0.661  0.634
+     V3   B3_evid 7.225 5.717 0.571     0.672  0.619
+     V3   B3_poss 7.225 5.717 0.571     0.672  0.619
+     V3   B3_prob 7.369 5.958 2.130     0.653  0.652
+    all    B0_idw 6.041 4.647 0.391     0.670    NaN
+    all    B1_sat 8.216 6.751 1.896     0.479    NaN
+    all B2_strict 6.216 4.931 0.850     0.658    NaN
+selected (validation RMSE): {"V1|evid_primary": {"param": "0.95", "RMSE": 7.134808630185684}, "V1|poss": {"param": "0.5", "RMSE": 7.1517302435373376}, "V1|prob": {"param": "", "RMSE": 7.167453602738547}, "V2|evid_primary": {"param": "0.95", "RMSE": 7.100405605395155}, "V2|poss": {"param": "0.25", "RMSE": 7.13400673165092}, "V2|prob": {"param": "", "RMSE": 7.190192090229098}, "V3|evid_primary": {"param": "0.95", "RMSE": 7.231157913435756}, "V3|poss": {"param": "0.75", "RMSE": 7.201453041950982}, "V3|prob": {"param": "", "RMSE": 7.282132697636318}}
+best variant per family: {"prob": {"variant": "V1", "param": "", "RMSE": 7.167453602738547}, "poss": {"variant": "V2", "param": "0.25", "RMSE": 7.13400673165092}, "evid_primary": {"variant": "V2", "param": "0.95", "RMSE": 7.100405605395155}}
+                    a                              b  RMSE_a_minus_b  ci_lo  ci_hi
+            V1 prob() V1 B3_prob (no relaxation, B3)          -0.038 -0.065 -0.010
+            V1 prob()                      B2_strict           0.951  0.700  1.159
+            V1 prob()                         B0_idw           1.126  0.939  1.301
+         V1 poss(0.5) V1 B3_poss (no relaxation, B3)          -0.016 -0.035  0.001
+         V1 poss(0.5)                      B2_strict           0.935  0.682  1.153
+         V1 poss(0.5)                         B0_idw           1.110  0.926  1.293
+V1 evid_primary(0.95) V1 B3_evid (no relaxation, B3)          -0.033 -0.113  0.025
+V1 evid_primary(0.95)                      B2_strict           0.919  0.684  1.113
+V1 evid_primary(0.95)                         B0_idw           1.093  0.932  1.244
+V1 evid_primary(0.95)                   V1 poss(0.5)          -0.017 -0.094  0.043
+V1 evid_primary(0.95)                      V1 prob()          -0.033 -0.106  0.022
+         V1 poss(0.5)                      V1 prob()          -0.016 -0.035  0.003
+            V2 prob() V2 B3_prob (no relaxation, B3)          -0.053 -0.113 -0.002
+            V2 prob()                      B2_strict           0.974  0.740  1.174
+            V2 prob()                         B0_idw           1.149  0.997  1.297
+        V2 poss(0.25) V2 B3_poss (no relaxation, B3)          -0.109 -0.189 -0.039
+        V2 poss(0.25)                      B2_strict           0.918  0.722  1.072
+        V2 poss(0.25)                         B0_idw           1.093  0.989  1.185
+V2 evid_primary(0.95) V2 B3_evid (no relaxation, B3)           0.005 -0.001  0.011
+V2 evid_primary(0.95)                      B2_strict           0.884  0.686  1.062
+V2 evid_primary(0.95)                         B0_idw           1.059  0.933  1.179
+V2 evid_primary(0.95)                  V2 poss(0.25)          -0.034 -0.110  0.045
+V2 evid_primary(0.95)                      V2 prob()          -0.090 -0.148 -0.039
+        V2 poss(0.25)                      V2 prob()          -0.056 -0.137  0.020
+            V3 prob() V3 B3_prob (no relaxation, B3)          -0.087 -0.171 -0.015
+            V3 prob()                      B2_strict           1.066  0.808  1.301
+            V3 prob()                         B0_idw           1.241  1.061  1.428
+        V3 poss(0.75) V3 B3_poss (no relaxation, B3)          -0.024 -0.046 -0.006
+        V3 poss(0.75)                      B2_strict           0.985  0.729  1.192
+        V3 poss(0.75)                         B0_idw           1.160  0.981  1.323
+V3 evid_primary(0.95) V3 B3_evid (no relaxation, B3)           0.006 -0.056  0.069
+V3 evid_primary(0.95)                      B2_strict           1.015  0.773  1.215
+V3 evid_primary(0.95)                         B0_idw           1.190  1.024  1.357
+V3 evid_primary(0.95)                  V3 poss(0.75)           0.030 -0.025  0.091
+V3 evid_primary(0.95)                      V3 prob()          -0.051 -0.187  0.102
+        V3 poss(0.75)                      V3 prob()          -0.081 -0.225  0.088
+            V1 prob()                      V2 prob()          -0.023 -0.200  0.182
+            V1 prob()                      V3 prob()          -0.115 -0.266  0.065
+            V2 prob()                      V3 prob()          -0.092 -0.210  0.019
+         V1 poss(0.5)                  V2 poss(0.25)           0.018 -0.109  0.168
+         V1 poss(0.5)                  V3 poss(0.75)          -0.050 -0.089 -0.015
+        V2 poss(0.25)                  V3 poss(0.75)          -0.067 -0.195  0.044
+V1 evid_primary(0.95)          V2 evid_primary(0.95)           0.034 -0.123  0.208
+V1 evid_primary(0.95)          V3 evid_primary(0.95)          -0.096 -0.138 -0.056
+V2 evid_primary(0.95)          V3 evid_primary(0.95)          -0.131 -0.317  0.035
+            B2_strict                         B0_idw           0.175  0.069  0.315
+               B1_sat                         B0_idw           2.174  1.507  3.027
+(1657 cases, 70 dates, 24 stations, 10 non-overlapping 7-day blocks, B = 2000, seed 1)
+           source    ECE  Brier  accuracy
+    V1_membership 0.0927 0.4481    0.6741
+V1_betp_consonant 0.1349 0.4675    0.6741
+          V2_betp 0.3081 0.6489    0.6578
+      V3_gaussian 0.0405 0.4462    0.6717
+V3_betp_consonant 0.1184 0.4845    0.6741
+              method    n  accuracy  Brier
+           prob_init 1657    0.5401 0.5604
+   contour_init_betp 1657    0.5305 0.5700
+           rosenfeld 1657    0.5003 0.5743
+          poss_g0.25 1657    0.5305 0.5701
+          poss_g0.50 1657    0.5317 0.5702
+          poss_g0.75 1657    0.5317 0.5702
+evid_primary_rho0.50 1657    0.5299 0.5701
+evid_primary_rho0.80 1657    0.5287 0.5703
+evid_primary_rho0.95 1657    0.5263 0.5706
+Empty DataFrame
+Columns: [variant, family, param, root_eps_floor, root_upper_clip, root_lower_clip, root_nonconverged, root_complete_conflict_input, invalid_decomposition_cases, complete_conflict_final]
+Index: []
+C4 projection (sums to 1 incl. empty set, empty mass carried over, singleton formula, envelope max 1) PASS 
+C5 cautious rule idempotent, commutative, associative (random BBAs, 1e-9) PASS (INV counter 0)
+C5b cautious rule agrees with the audited evid_k.Frame implementation PASS 
+C6a CDD with rho = 0 equals the conjunctive rule PASS 
+C6b CDD with rho = 1 does not over-count identical copies PASS 
+C7 root search hits the target within 1e-4 when no clipping is flagged PASS flags [200, 0, 0, 0, 0, 0]
+C13 reconstruction keeps m(empty) and m(Theta) PASS 
+C14 BetP uses normalised masses PASS 
+C10 leakage: maximum day read = 140 PASS 
+C1 validation cases = 1657, dates = 70, stations = 24 PASS 
+done 55s

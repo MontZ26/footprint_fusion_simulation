@@ -1,0 +1,59 @@
+{
+ "spec": "RASTER_SPEC_v3 rev5 sha256 8bb337cc8635",
+ "selection_grid": {
+  "V1|evid_primary": {
+   "param": "0.95",
+   "RMSE": 7.134808630185684
+  },
+  "V1|poss": {
+   "param": "0.5",
+   "RMSE": 7.1517302435373376
+  },
+  "V1|prob": {
+   "param": "",
+   "RMSE": 7.167453602738547
+  },
+  "V2|evid_primary": {
+   "param": "0.95",
+   "RMSE": 7.100405605395155
+  },
+  "V2|poss": {
+   "param": "0.25",
+   "RMSE": 7.13400673165092
+  },
+  "V2|prob": {
+   "param": "",
+   "RMSE": 7.190192090229098
+  },
+  "V3|evid_primary": {
+   "param": "0.95",
+   "RMSE": 7.231157913435756
+  },
+  "V3|poss": {
+   "param": "0.75",
+   "RMSE": 7.201453041950982
+  },
+  "V3|prob": {
+   "param": "",
+   "RMSE": 7.282132697636318
+  }
+ },
+ "best_variant_per_family": {
+  "prob": {
+   "variant": "V1",
+   "param": "",
+   "RMSE": 7.167453602738547
+  },
+  "poss": {
+   "variant": "V2",
+   "param": "0.25",
+   "RMSE": 7.13400673165092
+  },
+  "evid_primary": {
+   "variant": "V2",
+   "param": "0.95",
+   "RMSE": 7.100405605395155
+  }
+ },
+ "note": "validation days 71-140 only; the final period has not been read"
+}
